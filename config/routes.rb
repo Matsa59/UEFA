@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
   devise_for :users
+
+  get '/admin/countries' => 'countries#index_admin', as: :country_admin_index
+  get '/admin/country/new' => 'countries#new', as: :country_new
+  post '/admin/country/create' => 'countries#create', as: :country_create
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
