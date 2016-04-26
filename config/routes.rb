@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  get 'admin/index'
+  get '/admin' => 'admin#index', as: :admin_index
 
   devise_for :users
 
   get '/admin/countries' => 'countries#index_admin', as: :country_admin_index
   get '/admin/country/new' => 'countries#new', as: :country_new
   post '/admin/country/create' => 'countries#create', as: :country_create
+  patch '/admin/country/update/:id' => 'countries#update', as: :country_update
+  get '/admin/country/edit/:id' => 'countries#edit', as: :country_edit
+  delete '/admin/country/delete/:id' => 'countries#destroy', as: :country_delete
 
 
   # The priority is based upon order of creation: first created -> highest priority.
