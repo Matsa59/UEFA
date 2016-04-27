@@ -13,6 +13,10 @@ gem 'autoprefixer-rails'
 # will_paginate (auto pagination)
 gem 'will_paginate'
 
+# excel format
+gem 'axlsx', '~> 2.0'
+gem 'axlsx_rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
