@@ -267,8 +267,8 @@ desired effect
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>Utilisateurs</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li>Voir tous les utilisateurs</li>
-            <li>Exporter la liste des utilsateurs</li>
+            <li><%= link_to 'Voir tous les utilisateurs', users_admin_index_path %></li>
+            <li><%= link_to 'Télécharger la liste', users_download_path(format: 'xlsx') %></li>
           </ul>
         </li>
       </ul><!-- /.sidebar-menu -->
