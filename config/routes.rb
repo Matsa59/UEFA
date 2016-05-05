@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
   get '/admin' => 'admin#index', as: :admin_index
 
   devise_for :users
@@ -10,8 +12,15 @@ Rails.application.routes.draw do
   get '/admin/pays/edit/:id' => 'countries#edit', as: :country_edit
   delete '/admin/pays/delete/:id' => 'countries#destroy', as: :country_delete
 
+  # user management
   get '/admin/utilisateurs' => 'admin#users_index', as: :users_admin_index
   get '/admin/utilisateurs/download' => 'admin#users_download', as: :users_download
+
+  # matches management
+  get '/admin/matches' => 'match#index_admin', as: :matches_admin_index
+  get '/admin/match/new' => 'match#new', as: :match_new
+  post '/admin/match/create' => 'match#create', as: :match_create
+  delete '/admin/match/delete/:id' => 'match#destroy', as: :match_delete
 
 
   # The priority is based upon order of creation: first created -> highest priority.
