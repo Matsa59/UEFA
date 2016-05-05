@@ -1,0 +1,32 @@
+<% content_for :header do %>
+    <h2>Ajouter un match</h2>
+<% end %>
+
+<div class="col-xs-6">
+  <div class="box box-primary">
+    <%= form_for :match, url: match_create_path do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <label>date : </label>
+            <%= f.datetime_select :begin_at, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="box-body">
+          <div class="form-group">
+            <label>Premier pays :</label>
+            <%= f.collection_select :local_country_id, @countries, :id, :name, { :include_blank => '-- Choisir un pays --' }, required: true %>
+          </div>
+
+          <div class="form-group">
+            <label>Second pays :</label>
+            <%= f.collection_select :guess_country_id, @countries, :id, :name, { :include_blank => '-- Choisir un pays --' }, required: true %>
+          </div>
+        </div>
+
+        <div class="box-footer">
+          <%= f.submit value: 'Enregistrer', class: 'btn btn-primary' %>
+        </div>
+    <% end %>
+  </div>
+</div>

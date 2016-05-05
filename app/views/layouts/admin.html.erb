@@ -258,8 +258,8 @@ desired effect
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>Matchs</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li>Voir tous les matchs</li>
-            <li>Ajouter un match</li>
+            <li><%= link_to 'Voir tous les matchs', matches_admin_index_path %></li>
+            <li><%= link_to 'Ajouter un match', match_new_path %></li>
             <li>Rentrer un score</li>
           </ul>
         </li>

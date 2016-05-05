@@ -1,6 +1,6 @@
 class CountriesController < ApplicationController
   layout 'admin'
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :admin_require
 
   def index_admin
     @countries = Country.order(:name => :asc).paginate(:page => params[:page]);
