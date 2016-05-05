@@ -50,6 +50,14 @@ a {
     }
 }
 
+.contain {
+  height: 100%;
+  width: 100%;
+  background: image_url("public/pattern-grid.png") repeat;
+  background-size: 3px;
+  background-color: rgba(0,0,0,0.3);
+}
+
 .light {
     font-weight: 400;
 }
@@ -159,14 +167,6 @@ a {
               font-size: 26px;
           }
       }
-  }
-
-  .contain {
-    height: 100%;
-    width: 100%;
-    background: image_url("public/pattern-grid.png") repeat;
-    background-size: 4px;
-    background-color: rgba(0,0,0,0.3);
   }
 
   .text_home {
