@@ -125,38 +125,41 @@ a {
 .intro {
   //(../../images/public/euro-2016-trophee_5478638.jpg)
   display: table;
-  width: 100%;
-  height: auto;
+  width: 100vh;
+  height: 100vw;
   padding: 100px 0;
   text-align: center;
   color: white;
   background: image_url("public/euro-2016-trophee_5478638.jpg") no-repeat bottom center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    .intro-body {
-        vertical-align: middle;
-        .brand-heading {
-            font-size: 40px;
-        }
-        .intro-text {
-            font-size: 18px;
-        }
-    }
-    @media(min-width:768px) {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-            .brand-heading {
-                font-size: 100px;
-            }
-            .intro-text {
-                font-size: 26px;
-            }
-        }
-    }
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  .intro-body {
+      vertical-align: middle;
+      .brand-heading {
+          font-size: 40px;
+      }
+      .intro-text {
+          font-size: 18px;
+      }
+  }
+
+  @media(min-width:768px) {
+    height: 100vh;
+    width: 100vw;
+      padding: 0;
+      .intro-body {
+          .brand-heading {
+              font-size: 100px;
+          }
+          .intro-text {
+              font-size: 26px;
+          }
+      }
+  }
 
   .contain {
     height: 100%;
