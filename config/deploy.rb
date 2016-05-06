@@ -1,6 +1,6 @@
 server '92.222.76.93', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@github.com:smile59/uefa.git'
+set :repo_url,        'git@github.com:smile59/UEFA.git'
 set :application,     'eufa_project'
 set :user,            'prod'
 set :puma_threads,    [4, 16]
@@ -24,7 +24,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Defaults:
 # set :scm,           :git
-# set :branch,        :master
+set :branch,        'Release/0.1'
 # set :format,        :pretty
 # set :log_level,     :debug
 # set :keep_releases, 5
@@ -50,7 +50,7 @@ namespace :deploy do
   task :check_revision do
     on roles(:app) do
       unless `git rev-parse HEAD` == `git rev-parse origin/Release/0.1`
-        puts "WARNING: HEAD is not the same as origin/Relea/0.1"
+        puts "WARNING: HEAD is not the same as origin/Release/0.1"
         puts "Run `git push` to sync changes."
         exit
       end
