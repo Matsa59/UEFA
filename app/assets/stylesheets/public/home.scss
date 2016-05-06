@@ -8,3 +8,58 @@ h1 {
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
 }
+
+.btn-circle_match {
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  padding: 7px 7px;
+  //border: 2px solid red;
+  border-radius: 100% !important;
+  font-size: 25px;
+  color: white;
+  background: #fe001a;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: white;
+    background: rgba(white, 0.1);
+
+  }
+  i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+  }
+  &:hover {
+    i.animated {
+      -webkit-animation-name: pulse;
+      -moz-animation-name: pulse;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+    }
+  }
+}
+
+
+.form_match {
+  height: 70%;
+  width: 100%;
+  //background: image_url("public/test.jpg")no-repeat bottom center scroll;
+}
+
+.image_left {
+  float: left;
+}
+
+.image_right {
+  float: right;
+}
