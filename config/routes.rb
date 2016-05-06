@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'home#index'
 
   get '/admin' => 'admin#index', as: :admin_index
@@ -33,6 +34,8 @@ Rails.application.routes.draw do
   get '/admin/pool/edit/:id' => 'pool#edit', as: :pool_edit
   put '/admin/pool/update/:id' => 'pool#update', as: :pool_update
 
+  # results management
+  get '/results' => 'results#resultats'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

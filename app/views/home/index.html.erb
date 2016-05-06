@@ -6,37 +6,70 @@
               <h1 class="brand-heading">Bienvenue  </h1>
               <p class="intro-text">sur la plateforme de paris EURO 2016  <br>de l'Avenir de l'artois</p>
                 <i class="fa fa-angle-double-down animated"></i>
-              </a>
             </div>
     </div>
   </div>
 </header>
 
-<!-- Next Match section -->
-<section id="nextMatch" class="container content-section text-center">
-  <div class="form_match">
-    <!-- REQUETE en base pour afficher l'icone de l'équipe -->
-    <p style="float: left"><b>FRANCE</b></p> <p style="float: right"><b>UKRAINE</b></p>
-    <%= image_tag("public/maillot_France.png", :class => "image_left")%> <%= image_tag("public/maillot_Ukraine.png", :class => "image_right") %>
-    <button type="button" class="btn btn-circle_match" ><b>Parier</b></button>
-  </div>
-  <br><b>Vendredi 10 Juin 2016<br>
-  Stade de France<br>
-  20h30</b>
-  <!-- Remplacer ces infos par les infos de la BDD -->
-</section>
 
-<!-- Resultat Section -->
-<section id="resultats" class="content-section text-center">
-  <h2>Résultats</h2>
-  <div class="download-section">
-    <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
+<div class ="form_match">
+  <section id="nextMatch" class="content-section text-center">
 
+      <div class="container">
+        <div class="truc">
+        <%= image_tag("public/france.png", :class => "image_left", :width => "200px", :height => "133px")%> <%= image_tag("public/england-flag.jpg", :class => "image_right", :width => "200px", :height => "133px") %>
+        <a href="" class="btn btn-circle_match "><i class="fa fa-github fa-fw"></i> <span><b>Parier</b></span></a>
+      </div>
+      <div class="infos_match">
+        <b>Vendredi 10 Juin 2016 <br />
+          Stade de France <br />
+          20h45 </b>
       </div>
     </div>
+
+
+  </section>
+</div>
+
+
+<!-- Resultat Section -->
+
+  <div class="result">
+    <div class="filtre_result">
+    <section id="resultats" class="content-section text-center">
+      <h2>Résultats</h2>
+        <div class="col-lg-8 col-lg-offset-2">
+          <table class="table panel-table" style="overflow-y: hidden; text-align: center">
+            <thead>
+            <tr>
+              <th style="text-align: center"><b>Date</b></th>
+              <th style="text-align: center"><b>Phase</b></th>
+              <th style="text-align: center"><b>Match</b></th>
+              <th style="text-align: center"><b>Score</b></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>10/06/16</td>
+              <td>1/8</td>
+              <td>France - Ukraine</td>
+              <td>3-2</td>
+            </tr>
+            <tr>
+              <td>10/06/16</td>
+              <td>1/8</td>
+              <td>France - Ukraine</td>
+              <td>3-2</td>
+            </tr>
+            </tbody>
+          </table>
+          <a href="/results" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Voir plus</span></a>
+        <!-- 51 matchs -->
+
+      </div>
+    </section>
   </div>
-</section>
+</div>
 
 <!-- Connexion Section
 <section id="Connexion" class="container content-section text-center">
@@ -62,14 +95,8 @@
 </section> -->
 
 <!-- Map Section -->
-<div id="map"></div>
 
-<!-- Footer -->
-<footer>
-  <div class="container text-center">
-    <p>Copyright &copy; Your Website 2014</p>
-  </div>
-</footer>
+
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
