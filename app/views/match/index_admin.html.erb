@@ -36,6 +36,10 @@
                           <%= match.local_country.name %> / <%= match.guess_country.name %>
                         </td>
                         <td>
+                          <%= link_to match_edit_path(match), data: {no_turbolink: true} do %>
+                              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                          <% end %>
+
                           <%= link_to match_delete_path(match), method: :delete, data: { confirm: 'Êtes vous sûr?' } do %>
                               <span class="glyphicon glyphicon-remove-circle red" aria-hidden="true"></span>
                           <% end %>

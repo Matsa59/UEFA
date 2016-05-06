@@ -247,21 +247,16 @@ desired effect
           <% end %>
         </li>
 
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i><span>Pays</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><%= link_to 'Voir tous les pays', country_admin_index_path %></li>
-            <li><%= link_to 'Ajouter un pays', country_new_path %></li>
-          </ul>
+        <li>
+          <%= link_to country_admin_index_path do %>
+              <i class="fa fa-link"></i> <span>Pays</span>
+          <% end %>
         </li>
 
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i><span>Matchs</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><%= link_to 'Voir tous les matchs', matches_admin_index_path %></li>
-            <li><%= link_to 'Ajouter un match', match_new_path %></li>
-            <li>Rentrer un score</li>
-          </ul>
+        <li>
+          <%= link_to match_admin_path do %>
+              <i class="fa fa-link"></i> <span>Matchs</span>
+          <% end %>
         </li>
 
         <li class="treeview">
@@ -270,6 +265,12 @@ desired effect
             <li><%= link_to 'Voir tous les utilisateurs', users_admin_index_path %></li>
             <li><%= link_to 'Télécharger la liste', users_download_path(format: 'xlsx') %></li>
           </ul>
+        </li>
+
+        <li>
+          <%= link_to pools_admin_path do %>
+              <i class="fa fa-link"></i> <span>Poules</span>
+          <% end %>
         </li>
       </ul><!-- /.sidebar-menu -->
     </section>

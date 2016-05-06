@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        pool:
+          attributes:
+            name:
+              too_short: 'Le nom est trop court (minimum : %{count} caractère).'
+              too_long: 'Le nom est trop long (maximum : %{count} caractères).'

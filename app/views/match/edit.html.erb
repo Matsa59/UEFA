@@ -1,12 +1,12 @@
 <% content_for :header do %>
-    <h2>Ajouter un match</h2>
+    <h2>Modifier le match <%= @match.local_country.name %> / <%= @match.guess_country.name %></h2>
 <% end %>
 
 <div class="col-xs-6">
   <div class="box box-primary">
     <%= match_errors_messages! %>
 
-    <%= form_for :match, url: match_create_path do |f| %>
+    <%= form_for :match, url: match_update_path do |f| %>
         <div class="box-body">
           <div class="box-body">
             <div class="form-group">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="box-footer">
-          <%= f.submit value: 'Enregistrer', class: 'btn btn-primary' %>
+          <%= f.submit value: 'Enregistrer les modifications', class: 'btn btn-primary' %>
         </div>
     <% end %>
   </div>

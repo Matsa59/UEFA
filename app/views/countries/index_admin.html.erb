@@ -31,7 +31,7 @@
                       <tr role="row" class="odd">
                         <td><%= country.name %></td>
                         <td>
-                          <%= link_to country_edit_path(country) do %>
+                          <%= link_to country_edit_path(country), data: {no_turbolink: true} do %>
                             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                           <% end %>
 
@@ -67,4 +67,6 @@
       </div><!-- /.box -->
     </div><!-- /.col -->
   </div><!-- /.row -->
+
+  <%= link_to 'Ajouter un pays', country_new_path, class: 'btn btn-primary' %>
 </section>
