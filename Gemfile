@@ -17,6 +17,9 @@ gem 'will_paginate'
 gem 'axlsx', '~> 2.0'
 gem 'axlsx_rails'
 
+# I18N
+gem 'rails-i18n'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record

@@ -17,10 +17,20 @@ Rails.application.routes.draw do
   get '/admin/utilisateurs/download' => 'admin#users_download', as: :users_download
 
   # matches management
-  get '/admin/matches' => 'match#index_admin', as: :matches_admin_index
+  get '/admin/matches' => 'match#index_admin', as: :match_admin
   get '/admin/match/new' => 'match#new', as: :match_new
   post '/admin/match/create' => 'match#create', as: :match_create
   delete '/admin/match/delete/:id' => 'match#destroy', as: :match_delete
+  get '/admin/match/edit/:id' => 'match#edit', as: :match_edit
+  put '/admin/match/update/:id' => 'match#update', as: :match_update
+
+  # Pools
+  get '/admin/pools' => 'pool#index_admin', as: :pools_admin
+  get '/admin/pool/new' => 'pool#new', as: :pool_new
+  post '/admin/pool/create' => 'pool#create', as: :pool_create
+  delete '/admin/pool/delete/:id' => 'pool#destroy', as: :pool_delete
+  get '/admin/pool/edit/:id' => 'pool#edit', as: :pool_edit
+  put '/admin/pool/update/:id' => 'pool#update', as: :pool_update
 
 
   # The priority is based upon order of creation: first created -> highest priority.
