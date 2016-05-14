@@ -1,41 +1,76 @@
-// Place all the styles related to the match controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .advertising {
   background-color: orange;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
-.matchs, .team, .players {
-  //padding:50px 0 50px 0;
+.player, .matchs, .team {
+  .block-title {
+    margin: 20px 0 10px;
+  }
+}
+
+.player, .team {
   .half-advertising {
     background-color: orange;
     height: 100px;
   }
 }
 
-.matchs{
-  background-color: #102061;
-}
-
-.match-row-score {
-  text-align: center;
-}
-
-.partners {
-  background-color: green;
-  height: 100px;
-}
-
-.players {
+.player {
   background-color: white;
   color: black;
-  padding: 0px;
+  .half-player {
+    .players {
+      padding-bottom: 15px;
+      img {
+        border-radius: 50px;
+        width: 50px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.matchs{
+  background-color: #102061;
+  .row {
+    margin: 10px;
+    .match-row-score {
+      text-align: center;
+      .team-1, .team-2 {
+        display: inline-block;
+        span {
+          margin: 0 10px;
+          font-size: 1.1em;
+        }
+        img {
+          border-radius: 50px;
+          width: 50px;
+        }
+      }
+      .hour-match {
+        margin: 0 40px;
+      }
+    }
+  }
 }
 
 .team {
   background-color: white;
   color: black;
-  padding: 0px;
+  .half-team {
+    .teams {
+      padding-bottom: 15px;
+      img {
+        border-radius: 50px;
+        width: 50px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.partners {
+  background-color: green;
+  height: 100px;
 }
