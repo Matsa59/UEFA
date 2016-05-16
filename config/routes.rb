@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # matches management
   get '/admin/matches' => 'match#index_admin', as: :match_admin
   get '/admin/match/new' => 'match#new', as: :match_new
+  get '/matchs/' => 'match#index', as: :match
   post '/admin/match/create' => 'match#create', as: :match_create
   delete '/admin/match/delete/:id' => 'match#destroy', as: :match_delete
   get '/admin/match/edit/:id' => 'match#edit', as: :match_edit
