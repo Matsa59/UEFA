@@ -73,3 +73,48 @@
     }
   }
 }
+
+.resPassPage {
+  background-image: image_url("public/ChairW.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100%;
+  padding-top: 20%;
+
+  .resPassBloc {
+    background-color: rgba(0,0,0,0.6);  //#35b78a;
+    border-radius: 3px;
+    padding: 20px 20px 35px 20px;
+
+    h2 {
+      text-align: center;
+      color: #35b78a;
+      margin-top: 5px;
+      letter-spacing: 7px;
+      font-size: 35px;
+    }
+
+    .field {
+      //padding-left: 30%;
+      text-align: center;
+      width: 100%;
+      margin: 45px 0px 13px 0px;
+    }
+
+    .field input {
+      color: #D3D2DB;
+      background-color: #2c3b41;
+      padding: 5px;
+      width: 250px;
+      border-radius: 2px;
+      margin-left: 15px;
+    }
+
+    .actions {
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+}
