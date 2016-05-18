@@ -9,11 +9,35 @@ h1 {
   font-family: 'Titillium Web', sans-serif;
 }
 
+
+.btn {
+  text-transform: uppercase;
+  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+
+}
+
+.btn_bet {
+  text-transform: uppercase;
+  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+
+}
+
 .btn-circle_match {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin-top: 15px;
-  padding: 7px 7px;
+  padding: 30px 4px;
+
   //border: 2px solid red;
   border-radius: 100% !important;
   font-size: 25px;
@@ -50,16 +74,64 @@ h1 {
 }
 
 
-.form_match {
-  height: 70%;
+.filtre_result {
+  height: 100%;
   width: 100%;
-  //background: image_url("public/test.jpg")no-repeat bottom center scroll;
+  background: image_url("public/pattern-grid.png") repeat;
+  background-size: 3px;
+  background-color: rgba(192,192,192,0.3);
+}
+
+.form_match {
+  height: 100%;
+  width: 100%;
+  background: image_url("public/Stade2.png") no-repeat bottom center scroll;
+  background-size: cover;
+  //background-color: rgba(0,0,0,0.3);
+
+  .truc {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+
+
+    img {
+        
+    }
+  }
 }
 
 .image_left {
+
   float: left;
 }
 
 .image_right {
   float: right;
 }
+
+.infos_match {
+  text-align: center;
+}
+
+.panel-table {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.result {
+  height: 100%;
+  width: 100%;
+
+  background: image_url("public/stade.png") no-repeat bottom center scroll;
+  background-size: cover;
+}
+
+.team {
+  height: 50%;
+  width: 100%;
+
+}
+
+
+
+
+
