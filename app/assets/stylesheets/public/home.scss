@@ -33,10 +33,10 @@ h1 {
 }
 
 .btn-circle_match {
-  width: 100px;
-  height: 100px;
-  margin-top: 15px;
-  padding: 30px 4px;
+  width: 110px;
+  height: 110px;
+  margin-top: 5px;
+  padding: 35px 0px;
 
   //border: 2px solid red;
   border-radius: 100% !important;
@@ -73,6 +73,11 @@ h1 {
   }
 }
 
+.filterMatchSect {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
 
 .filtre_result {
   height: 100%;
@@ -85,32 +90,60 @@ h1 {
 .form_match {
   height: 100%;
   width: 100%;
-  background: image_url("public/Stade2.png") no-repeat bottom center scroll;
+  background: image_url("public/euroTrophee.png") no-repeat bottom center scroll;
   background-size: cover;
   //background-color: rgba(0,0,0,0.3);
 
-  .truc {
-    background-color: rgba(0,0,0,0.5);
-    padding: 10px;
-
-
-    img {
-        
-    }
+  .betDesc {
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 25px;
+    margin-right: 25px;
+    height: 35px;
   }
-}
 
-.image_left {
+  .betDesc p {
+    color: black;
+    font-weight: bold;
+  }
 
-  float: left;
-}
+  .encartLastBet {
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    height: 160px;
+    margin: 25px 25px 50px 25px;
+  }
 
-.image_right {
-  float: right;
-}
+  img {
+    //height: 160px;
+    vertical-align: middle;
+    height: auto;
+    width: 73%;
+    border: 1px solid #BBBBBB;
+  }
 
-.infos_match {
-  text-align: center;
+  .left img {
+    float: left;
+  }
+
+  .right img {
+    float: right;
+  }
+
+  .inheritFlag {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .lastBet {
+    //margin-bottom: 75px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .lastBets {
+    padding-top: 100px;
+  }
 }
 
 .panel-table {
