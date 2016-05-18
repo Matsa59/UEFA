@@ -28,6 +28,25 @@
       </div>
     </div>
 
+    <%# right code %>
+
+    <div class="container">
+      <div class="truc">
+        <% if @matches.nil? %>
+            ERROR
+        <% else %>
+          <% @matches.each do |match| %>
+            <div class="col-lg-4"><%= match.local_country.name %></div>
+            <div class="col-lg-4">VS</div>
+            <div class="col-lg-4"><%= match.guess_country.name %></div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="infos_match">
+
+      </div>
+    </div>
+
 
   </section>
 </div>
