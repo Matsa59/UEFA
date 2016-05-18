@@ -6,7 +6,8 @@ set :user,            'prod'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
-set :linked_dirs, %w(bin log tmp config)
+set :linked_dirs, %w(bin log)
+set :linked_files, %w(config/database.yml config/secrets.yml)
 
 # Don't change these unless you know what you're doing
 set :pty,             true
@@ -29,7 +30,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 set :branch,        'Release/0.1'
 # set :format,        :pretty
 # set :log_level,     :debug
-# set :keep_releases, 5
+set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
@@ -79,6 +80,9 @@ namespace :deploy do
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 end
+
+
+
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
