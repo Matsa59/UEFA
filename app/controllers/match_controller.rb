@@ -3,7 +3,7 @@ class MatchController < ApplicationController
   before_action :admin_require, except: [:index]
 
   def index_admin
-    @matches = Match.order(begin_at: :asc).paginate(page: params[:page], per_page: 10);
+    @matches = Match.order(begin_at: :asc).paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -55,7 +55,7 @@ class MatchController < ApplicationController
   end
 
   def index
-
+    @matches = Match.order(begin_at: :asc).paginate(page: params[:page], per_page: 6)
   end
 
   private
