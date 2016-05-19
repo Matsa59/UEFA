@@ -242,25 +242,25 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">ADMIN MENU</li>
         <li class="active">
-          <%= link_to admin_index_path do %>
+          <%= link_to admin_index_path, data: { no_turbolink: true } do %>
             <i class="fa fa-link"></i> <span>Home</span>
           <% end %>
         </li>
 
         <li>
-          <%= link_to country_admin_index_path do %>
+          <%= link_to country_admin_index_path, data: { no_turbolink: true } do %>
               <i class="fa fa-link"></i> <span>Pays</span>
           <% end %>
         </li>
 
         <li>
-          <%= link_to match_admin_path do %>
+          <%= link_to match_admin_path, data: { no_turbolink: true } do %>
               <i class="fa fa-link"></i> <span>Matchs</span>
           <% end %>
         </li>
 
         <li>
-          <%= link_to stade_admin_path do %>
+          <%= link_to stade_admin_path, data: { no_turbolink: true } do %>
               <i class="fa fa-link"></i> <span>Stades</span>
           <% end %>
         </li>
@@ -268,13 +268,13 @@ desired effect
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i><span>Utilisateurs</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><%= link_to 'Voir tous les utilisateurs', users_admin_index_path %></li>
-            <li><%= link_to 'Télécharger la liste', users_download_path(format: 'xlsx') %></li>
+            <li><%= link_to 'Voir tous les utilisateurs', users_admin_index_path, data: { no_turbolink: true } %></li>
+            <li><%= link_to 'Télécharger la liste', users_download_path(format: 'xlsx'), data: { no_turbolink: true } %></li>
           </ul>
         </li>
 
         <li>
-          <%= link_to pools_admin_path do %>
+          <%= link_to pools_admin_path, data: { no_turbolink: true } do %>
               <i class="fa fa-link"></i> <span>Poules</span>
           <% end %>
         </li>

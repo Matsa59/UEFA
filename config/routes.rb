@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/admin' => 'admin#index', as: :admin_index
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   get '/admin/pays' => 'countries#index_admin', as: :country_admin_index
   get '/admin/pays/new' => 'countries#new', as: :country_new
