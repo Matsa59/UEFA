@@ -97,7 +97,7 @@ h1 {
   .betDesc {
     background-color: rgba(255,255,255,0.5);
     margin-bottom: 25px;
-    margin-right: 25px;
+    margin-right: 12px;
     height: 35px;
   }
 
@@ -111,14 +111,14 @@ h1 {
     padding: 20px;
     height: 160px;
     margin: 25px 25px 50px 25px;
+    border: 1px solid whitesmoke;
   }
 
-  img {
+  img.flags {
     //height: 160px;
     vertical-align: middle;
     height: auto;
     width: 73%;
-    border: 1px solid #BBBBBB;
   }
 
   .left img {
