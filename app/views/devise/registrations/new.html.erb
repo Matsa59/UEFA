@@ -18,6 +18,24 @@
 
           <div class="clear"></div>
 
+          <div class="field">
+            <%= f.text_field :phone_number, placeholder: 'Numéro de téléphone' %>
+          </div>
+
+          <div class="field">
+            <%= f.text_field :address, placeholder: 'Adresse' %>
+          </div>
+
+          <div class="semi-field">
+            <%= f.text_field :city, placeholder: 'Ville' %>
+          </div>
+
+          <div class="semi-field">
+            <%= f.text_field :zip_code, placeholder: 'Code postal'%>
+          </div>
+
+          <div class="clear"></div>
+
 
           <hr>
 
@@ -40,7 +58,7 @@
           <hr>
 
           <div class="actions">
-            <%= f.submit "Sign up", class: 'btn btn-default' %>
+            <%= f.submit "S'inscrire", class: 'btn btn-default' %>
           </div>
         <% end %>
         <div class="links">
