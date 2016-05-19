@@ -1,11 +1,16 @@
 <!-- Intro Header -->
 <section class="intro">
-  <div class="contain" >
-    <div class="intro-body">
-      <div class="text_home" >
-        <h1 class="brand-heading">Bienvenue  </h1>
-        <p class="intro-text">sur la plateforme de paris EURO 2016  <br>de l'Avenir de l'artois</p>
-          <i class="fa fa-angle-double-down animated"></i>
+  <div class="contain container" >
+    <div class="intro-body row">
+      <div class="text_home col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+        <h1 class="brand-heading">Jeu de l'Euro 2016</h1>
+        <p class="intro-text">Bienvenue sur notre site de paris en ligne</p>
+
+        <a href="/lots" id="butPrizes" class="btn btn-default btn-lg">
+          <span class="network-name">Découvrir tous les lots</span>
+        </a>
+
+        <i class="fa fa-angle-double-down animated"></i>
       </div>
     </div>
   </div>
@@ -24,10 +29,10 @@
 
                 <div class="betDesc">
                   <div class="col-lg-6">
-                    <p>Date : <%= match.begin_at %></p>
+                    <p>Date : <%= match.begin_at.httpdate %></p>
                   </div>
                   <div class="col-lg-6">
-                    <p>Lieu : Stade de France</p>
+                    <p>Lieu : <%= match.stade.name %></p>
                   </div>
                 </div>
 

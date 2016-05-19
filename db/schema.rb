@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160519102548) do
   add_index "matches", ["stade_id"], name: "index_matches_on_stade_id", using: :btree
 
   create_table "pools", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name",       limit: 255, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
