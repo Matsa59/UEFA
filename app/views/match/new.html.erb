@@ -29,6 +29,11 @@
             <label>Poule : </label><br />
             <%= f.collection_select :pool_id, @pools, :id, :name, { :include_blank => '-- Choisir une poule --'}, required: true %>
           </div>
+
+          <div class="form-group">
+            <label>Stade :</label><br/>
+            <%= f.collection_select :stade_id, @stades, :id, :name, { :include_blank => '-- Choisir un stade --'}, required: true %>
+          </div>
         </div>
 
         <div class="box-footer">

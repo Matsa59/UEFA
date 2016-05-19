@@ -7,5 +7,5 @@ class Match < ActiveRecord::Base
   belongs_to :local_country, class_name: 'Country'
   belongs_to :guess_country, class_name: 'Country'
   belongs_to :pool
-
+  belongs_to :stade
 end
