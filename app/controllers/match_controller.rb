@@ -9,17 +9,20 @@ class MatchController < ApplicationController
   def new
     @countries = Country.order(name: :asc)
     @pools = Pool.order(name: :asc)
+    @stades = Stade.order(name: :asc)
   end
 
   def create
     @match = Match.new(match_params)
     @match.local_country = Country.find(params[:match][:local_country_id])
     @match.guess_country = Country.find(params[:match][:guess_country_id])
+    @match.stade = Stade.find(params[:match][:stade_id])
     @match.pool = Pool.find_by(params[:match][:pool])
 
     if @match.local_country.id == @match.guess_country.id
       @countries = Country.order(name: :asc)
       @pools = Pool.order(name: :asc)
+      @stades = Stade.order(name: :asc)
 
       @match.errors.add(:guess_country_id ,'Un pays ne peut pas se rencontrer lui même.')
       @match.errors.add(:local_country_id ,'Un pays ne peut pas se rencontrer lui même.')
@@ -41,10 +44,34 @@ class MatchController < ApplicationController
     @match = Match.find_by(id: params[:id])
     @countries = Country.order(name: :asc)
     @pools = Pool.order(name: :asc)
+    @stades = Stade.order(name: :asc)
   end
 
   def update
+    @match = Match.find_by(:id => params[:id])
+    @match.local_country = Country.find(params[:match][:local_country_id])
+    @match.guess_country = Country.find(params[:match][:guess_country_id])
+    @match.stade = Stade.find(params[:match][:stade_id])
+    @match.pool = Pool.find_by(params[:match][:pool])
 
+    if @match.local_country.id == @match.guess_country.id
+      @countries = Country.order(name: :asc)
+      @pools = Pool.order(name: :asc)
+      @stades = Stade.order(name: :asc)
+
+      @match.errors.add(:guess_country_id ,'Un pays ne peut pas se rencontrer lui même.')
+      @match.errors.add(:local_country_id ,'Un pays ne peut pas se rencontrer lui même.')
+
+      render 'edit'
+      return
+    end
+
+    if @match.update(match_params)
+      @match
+      redirect_to :match_admin
+    else
+      render 'edit'
+    end
   end
 
   def destroy

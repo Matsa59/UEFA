@@ -37,6 +37,14 @@ Rails.application.routes.draw do
   # results management
   get '/results' => 'results#resultats'
 
+  #stade management
+  get '/admin/stades' => 'stade#index_admin', as: :stade_admin
+  get '/admin/stade/new' => 'stade#new', as: :stade_new
+  post 'admin/stade/create' => 'stade#create', as: :stade_create
+  delete '/admin/stade/delete/:id' => 'stade#destroy', as: :stade_delete
+  get '/admin/stade/edit/:id' => 'stade#edit', as: :stade_edit
+  put '/admin/stade/update/:id' => 'stade#update', as: :stade_update
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
