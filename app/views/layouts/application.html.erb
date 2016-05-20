@@ -26,13 +26,21 @@
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
-          <li>
-
-           <a class="page-scroll" href="../../#nextMatch">Prochain match</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="../../#resultats">Résultats</a>
-          </li>
+          <% unless current_page?('/') %>
+            <li>
+              <a class="page-scroll" href="../../#nextMatch">Prochain match</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="../../#resultats">Résultats</a>
+            </li>
+          <% else %>
+            <li>
+              <a class="page-scroll" href="#nextMatch">Prochain match</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#resultats">Résultats</a>
+            </li>
+          <% end %>
           <li>
             <% if user_signed_in? %>
               <%= link_to 'Déconnexion', destroy_user_session_path, :method => :delete %>
