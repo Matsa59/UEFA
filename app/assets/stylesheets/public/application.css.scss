@@ -24,34 +24,32 @@ body {
 
 footer {
   background: linear-gradient(transparent, rgba(0,0,0,0.8)); //#2B2B2A);
-  margin: -150px 0px 0px 0px;
+  //margin-top: -150px;
   padding: 0;
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
+  margin-top: -150px;
   height: 150px;
 
   .copyright {
     text-align: center;
   }
-
   .copyright p {
     margin-top: 15px;
+    font-size: 16px;
   }
-
   .copyright ul {
     list-style-type: none;
     display: inline-flex;
+    padding: 0;
   }
-
   .copyright li {
-    padding: 60px 15px 0px 15px;
+    padding: 50px 15px 0px 15px;
   }
-
   .layoutFooter {
 
   }
-
   .logo {
     background: image_url("public/logonordlit.jpg");
     width: 100%;
@@ -60,6 +58,18 @@ footer {
     margin-left: 37px;
     margin-top: 47px;
     background-size: 250px;
+    text-align: center;
+    @media screen and (max-width:845px) {
+      background-size: 200px;
+      margin-left: 20%;
+    }
+  }
+  @media screen and (max-width:845px) {
+    margin-top: -230px;
+    height: 230px;
+    .copyright p {
+      font-size: 13px;
+    }
   }
 }
 
