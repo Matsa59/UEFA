@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   post '/admin/match/create' => 'match#create', as: :match_create
   delete '/admin/match/delete/:id' => 'match#destroy', as: :match_delete
 
+  # lots management
+  get '/lots' => 'lots#index', as: :lots
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
