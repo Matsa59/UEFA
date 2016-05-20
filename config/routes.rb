@@ -48,6 +48,9 @@ Rails.application.routes.draw do
   # Legales
   get '/legales/sitemap' => 'legales#sitemap', as: :sitemap
 
+  # Rules
+  get 'reglement/' => 'rules#index', as: :rules
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
