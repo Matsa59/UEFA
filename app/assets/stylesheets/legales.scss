@@ -1,0 +1,16 @@
+.sitemap {
+  background-image: image_url("public/ChairW.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100%;
+  .btn-default {
+    width: 100%;
+  }
+  .sitemap-content {
+    margin-top: 200px;
+  }
+  .link-page {
+    margin-bottom: 15px;
+  }
+}

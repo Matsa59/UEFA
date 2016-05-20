@@ -45,6 +45,9 @@ Rails.application.routes.draw do
   get '/admin/stade/edit/:id' => 'stade#edit', as: :stade_edit
   put '/admin/stade/update/:id' => 'stade#update', as: :stade_update
 
+  # Legales
+  get '/legales/sitemap' => 'legales#sitemap', as: :sitemap
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

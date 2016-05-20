@@ -1,23 +1,23 @@
-<div class="resPassPage">
-  <div class="container resPassBloc">
-    <h2>Reset your password</h2>
+<section class="resPassPage">
+  <div class="filterEffect resPagePad">
+    <div class="container resPassBloc">
+      <h2>Reset your password</h2>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-        <%= devise_error_messages! %>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= devise_error_messages! %>
 
-        <div class="field">
-          <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true %>
-        </div>
-        <br />
-        <div class="actions">
-          <%= f.submit "Reset Password", :class => "btn btn-default" %>
-        </div>
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+          <br />
+          <div class="actions">
+            <%= f.submit "Reset Password", :class => "btn btn-default" %>
+          </div>
 
-    <% end %>
-
-
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
 
 
