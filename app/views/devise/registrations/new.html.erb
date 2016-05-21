@@ -1,0 +1,71 @@
+<section class="devise">
+  <div class="filterEffect">
+    <div class="contain">
+      <div class="connection-bloc">
+        <div class="middle">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="field part">
+              <div class="number">1</div> Identité
+            </div>
+            <div class="semi-field">
+              <%= f.text_field :last_name, placeholder: 'Nom', autofocus: true %>
+            </div>
+
+            <div class="semi-field">
+              <%= f.text_field :first_name, placeholder: 'Prénom' %>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="field">
+              <%= f.text_field :phone_number, placeholder: 'Numéro de téléphone' %>
+            </div>
+
+            <div class="field">
+              <%= f.text_field :address, placeholder: 'Adresse' %>
+            </div>
+
+            <div class="semi-field">
+              <%= f.text_field :city, placeholder: 'Ville' %>
+            </div>
+
+            <div class="semi-field">
+              <%= f.text_field :zip_code, placeholder: 'Code postal'%>
+            </div>
+
+            <div class="clear"></div>
+
+            <hr>
+
+            <div class="field part">
+              <div class="number">2</div> Compte
+            </div>
+
+            <div class="field">
+              <%= f.email_field :email, placeholder: 'Email' %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, autocomplete: "off", placeholder: '*****' %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: '*****' %>
+            </div>
+
+            <hr>
+
+            <div class="actions">
+              <%= f.submit "S'inscrire", class: 'btn btn-default' %>
+            </div>
+          <% end %>
+          <div class="links">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

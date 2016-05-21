@@ -1,0 +1,68 @@
+<% content_for :header do %>
+  <h2>Liste des utilisateurs</h2>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Hover Data Table</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                  <col width="auto">
+                  <col width="100px">
+                  <thead>
+                  <tr role="row">
+                    <th class="sorting" tabindex="0" rowspan="1" colspan="1">Nom</th>
+                    <th rowspan="1" colspan="1">Pr&eacute;nom</th>
+                    <th rowspan="1" colspan="1">Email</th>
+                    <th rowspan="1" colspan="1">Points</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% @users.each do |user| %>
+                      <tr role="row" class="odd">
+                        <td><%= user.last_name %></td>
+                        <td><%= user.first_name %></td>
+                        <td><%= user.email %></td>
+                        <td>NONE</td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th rowspan="1" colspan="1">Pays</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                Showing <%= @users.current_page %> to <%= @users.total_pages %> of <%= @users.count %> entries
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                <%= will_paginate(@users, :renderer => AdminHelper::LinkRenderer) %>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+
+
+</section>

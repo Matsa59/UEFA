@@ -1,0 +1,141 @@
+<!-- Intro Header -->
+<section class="intro">
+  <div class="contain container" >
+    <div class="intro-body row">
+      <div class="text_home col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+        <h1 class="brand-heading">Jeu de l'Euro 2016</h1>
+        <p class="intro-text">Bienvenue sur notre site de pronostique pour la coupe de football européenne </p>
+
+        <i class="fa fa-angle-double-down animated"></i>
+      </div>
+      <div class="btn-prizes">
+        <a href="/lots" class="btn btn-default btn-lg">
+          <span class="network-name">Découvrir tous les lots</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="nextMatch" class="form_match">
+  <div class="filterMatchSect TEST">
+    <div class="container text-center lastBets">
+
+      <% if @matches.nil? %>
+          ERROR
+      <% else %>
+        <% @matches.each do |match| %>
+          <div class="lastBet">
+
+            <div class="betDesc">
+              <div class="col-lg-6">
+                <p>Date : <%= match.begin_at.httpdate %></p>
+              </div>
+              <div class="col-lg-6">
+                <p>Lieu : <%= match.stade.name %></p>
+              </div>
+            </div>
+
+            <div class="encartLastBet">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 inheritFlag left">
+                <%= image_tag("public/england.jpg", :class => "flags")%>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 inheritFlag">
+                <a href="" class="btn btn-circle_match ">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span><b>Parier</b></span>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 inheritFlag right">
+                <%= image_tag("public/sweden.png", :class => "flags") %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</section>
+
+<!-- Resultat Section -->
+
+<section class="result">
+  <div class="filtre_result">
+    <div id="resultats" class="content-section container text-center">
+      <h2>Résultats</h2>
+      <div class="col-lg-12">
+        <table class="table panel-table" style="overflow-y: hidden; text-align: center">
+          <thead>
+          <tr>
+            <th style="text-align: center"><b>Date</b></th>
+            <th style="text-align: center"><b>Phase</b></th>
+            <th style="text-align: center"><b>Match</b></th>
+            <th style="text-align: center"><b>Score</b></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>10/06/16</td>
+            <td>1/8</td>
+            <td>France - Ukraine</td>
+            <td>3-2</td>
+          </tr>
+          <tr>
+            <td>10/06/16</td>
+            <td>1/8</td>
+            <td>France - Ukraine</td>
+            <td>3-2</td>
+          </tr>
+          </tbody>
+        </table>
+        <a href="/results" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Voir plus</span></a>
+        <!-- 51 matchs -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Connexion Section
+<section id="Connexion" class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h2>Contact Start Bootstrap</h2>
+      <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+      <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+      </p>
+      <ul class="list-inline banner-social-buttons">
+        <li>
+          <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+
+<!-- Map Section -->
+
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/grayscale.js"></script><script src="js/grayscale.js"></script>
