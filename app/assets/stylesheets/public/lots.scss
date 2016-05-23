@@ -1,0 +1,33 @@
+// Place all the styles related to the lots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-lots {
+  margin-top: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  margin-right: 10%;
+  margin-left: 10%;
+
+  .content-lots {
+    //width: 300px;
+    float: left;
+    margin: 40px;
+  }
+
+  .content-text p {
+    color: black;
+    text-align: center;
+  }
+
+  .title-lots h2{
+    text-align: center;
+    padding-top: 10px;
+    color: #001f3f;
+    font-size: 30px;
+  }
+
+  .content-text span {
+    color: #188ea0;
+  }
+}
+
