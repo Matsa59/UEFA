@@ -61,9 +61,9 @@
 
 <!-- Resultat Section -->
 
-<section class="result">
+<section id="resultats" class="result">
   <div class="filtre_result">
-    <div id="resultats" class="content-section container text-center">
+    <div class="content-section container text-center">
       <h2>Résultats</h2>
       <div class="col-lg-12">
         <table class="table panel-table" style="overflow-y: hidden; text-align: center">
@@ -126,10 +126,10 @@
 
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <!-- Plugin JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
@@ -139,3 +139,14 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/grayscale.js"></script><script src="js/grayscale.js"></script>
+
+<script type="text/javascript">
+  $('a[href^="#"]').click(function(){
+    var the_id = $(this).attr("href");
+    console.log("COUCOUC");
+    $('html, body').animate({
+      scrollTop:$(the_id).offset().top
+    }, 'slow');
+    return false;
+  });
+</script>
