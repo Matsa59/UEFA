@@ -1,0 +1,24 @@
+.rules-page {
+  background: image_url("public/stade.png") no-repeat center center fixed;
+  background-size: cover;
+  .rules-content {
+    padding-top: 90px;
+    .rules-container {
+      margin-bottom: 40px;
+      background-color: rgba(39, 43, 41, 0.58);
+      .rules-main-title {
+        margin-top: 15px;
+        font-size: 2.3em;
+      }
+      .rules {
+        .rule-title {
+          font-size: 1.3em;
+          margin: 20px 0 10px;
+        }
+        .rule-description {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
