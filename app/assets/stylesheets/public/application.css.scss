@@ -12,10 +12,29 @@
  *
  *= require_tree ../
  *= require_self
+ *= require cookies_eu
  */
 
 body {
   background-color: #000000;
+  .cookies-eu {
+    background-color: rgba(0,0,0,0.5);
+    .cookies-eu-content-holder {
+
+    }
+    .cookies-eu-button-holder {
+      .cookies-eu-ok {
+        background-color: #42DCA3;
+        background-image: linear-gradient(#42DCA3, rgba(255,255,255,0.8));
+        border: 1px solid #42DCA3;
+        cursor: pointer;
+        color: #2E2E2C;
+      }
+    }
+    .cookies-eu-link {
+
+    }
+  }
 }
 
 .clear {
@@ -36,7 +55,7 @@ footer {
     text-align: center;
   }
   .copyright p {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 16px;
   }
   .copyright ul {
@@ -45,7 +64,7 @@ footer {
     padding: 0;
   }
   .copyright li {
-    padding: 50px 15px 0px 15px;
+    padding: 35px 15px 0px 15px;
   }
   .layoutFooter {
 
