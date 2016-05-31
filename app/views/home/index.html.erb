@@ -30,7 +30,7 @@
 
             <div class="betDesc">
               <div class="col-lg-6">
-                <p>Date : <%= match.begin_at.httpdate %></p>
+                <p>Date : <%= match.begin_at.strftime("%d %b. %Y - %H:%M") %></p>
               </div>
               <div class="col-lg-6">
                 <p>Lieu : <%= match.stade.name %></p>
@@ -39,7 +39,7 @@
 
             <div class="encartLastBet">
               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 inheritFlag left">
-                <%= image_tag("public/england.jpg", :class => "flags")%>
+                <%= image_tag(match.local_country.image.url, :class => "flags")%>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 inheritFlag">
                 <a href="" class="btn btn-circle_match ">
@@ -48,7 +48,7 @@
                 </a>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 inheritFlag right">
-                <%= image_tag("public/sweden.png", :class => "flags") %>
+                <%= image_tag(match.guess_country.image.url, :class => "flags") %>
               </div>
             </div>
           </div>

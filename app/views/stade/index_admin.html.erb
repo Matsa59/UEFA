@@ -23,13 +23,15 @@
                   <thead>
                   <tr role="row">
                     <th class="sorting" tabindex="0" rowspan="1" colspan="1">Nom du stade</th>
-                    <th rowspan="1" colspan="1">Actions</th>
+                    <th class="middle" rowspan="1" colspan="1">Adresse</th>
+                    <th class="actions" rowspan="1" colspan="1">Actions</th>
                   </tr>
                   </thead>
                   <tbody>
                   <% @stades.each do |stade| %>
                       <tr role="row" class="odd">
                         <td><%= stade.name %></td>
+                        <td><%= stade.address %></td>
                         <td>
                           <%= link_to stade_edit_path(stade), data: {no_turbolink: true} do %>
                               <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
@@ -45,7 +47,8 @@
                   <tfoot>
                   <tr>
                     <th rowspan="1" colspan="1">Nom du stade</th>
-                    <th rowspan="1" colspan="1">Actions</th>
+                    <th class="middle" rowspan="1" colspan="1">Adresse</th>
+                    <th class="actions" rowspan="1" colspan="1">Actions</th>
                   </tr>
                   </tfoot>
                 </table>

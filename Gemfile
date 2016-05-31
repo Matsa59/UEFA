@@ -26,6 +26,9 @@ gem 'phony_rails'
 # Cookie Consent
 gem 'cookies_eu'
 
+# Paperclip : (file attachment in bdd --> pictures)
+gem 'paperclip', '~> 5.0.0.beta1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record

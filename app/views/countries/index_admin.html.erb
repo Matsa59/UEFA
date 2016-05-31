@@ -23,13 +23,17 @@
                   <thead>
                     <tr role="row">
                       <th class="sorting" tabindex="0" rowspan="1" colspan="1">Pays</th>
-                      <th rowspan="1" colspan="1">Actions</th>
+                      <th class="middle-desc" rowspan="1" colspan="1">Description</th>
+                      <th class="" rowspan="1" colspan="1">Flag</th>
+                      <th class="actions" rowspan="1" colspan="1">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <% @countries.each do |country| %>
                       <tr role="row" class="odd">
                         <td><%= country.name %></td>
+                        <td><%= country.description %></td>
+                        <td><%= image_tag(country.image.url, :class => "flag")%></td>
                         <td>
                           <%= link_to country_edit_path(country), data: {no_turbolink: true} do %>
                             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
@@ -45,6 +49,9 @@
                   <tfoot>
                     <tr>
                       <th rowspan="1" colspan="1">Pays</th>
+                      <th class="middle-desc" rowspan="1" colspan="1">Description</th>
+                      <th class="" rowspan="1" colspan="1">Flag</th>
+                      <th class="actions" rowspan="1" colspan="1">Actions</th>
                     </tr>
                   </tfoot>
                 </table>

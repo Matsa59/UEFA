@@ -44,6 +44,6 @@ class StadeController < ApplicationController
 
   private
   def stade_params
-    params.require(:stade).permit(:name)
+    params.require(:stade).permit(:name, :address)
   end
 end
