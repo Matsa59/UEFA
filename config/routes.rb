@@ -45,6 +45,15 @@ Rails.application.routes.draw do
   get '/admin/stade/edit/:id' => 'stade#edit', as: :stade_edit
   put '/admin/stade/update/:id' => 'stade#update', as: :stade_update
 
+  # Prizes
+  get '/admin/prizes' => 'prizes#index_admin', as: :prize_admin_index
+  get '/admin/prizes/new' => 'prizes#new', as: :prize_new
+  get '/prizes/' => 'prizes#index', as: :prize
+  post '/admin/prizes/create' => 'prizes#create', as: :prize_create
+  patch '/admin/prizes/update/:id' => 'prizes#update', as: :prize_update
+  get '/admin/prizes/edit/:id' => 'prizes#edit', as: :prize_edit
+  delete '/admin/prizes/delete/:id' => 'prizes#destroy', as: :prize_delete
+
   # Legales
   get '/legales/sitemap' => 'legales#sitemap', as: :sitemap
   get '/legales/reglement' => 'legales#rules', as: :rules
