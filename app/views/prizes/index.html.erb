@@ -1,0 +1,24 @@
+<section class="prizes-section">
+  <div class="filter-prizes">
+    <div class="container">
+      <div class="title-prizes col-lg-12"> 
+        <h1>Tous les LOTS</h1> 
+      </div>
+
+      <div class="row prizes-content">
+      <% @prizes.each do |prize| %>
+        <div class="prize-encart">
+          <div class="first-part">
+            <%= image_tag(prize.image.url, :class => "")%>
+          </div>
+          <div class="second-part">
+            <h3><%= prize.name %></h3>
+            <p><%= prize.description %></p>
+          </div>
+        </div>
+      <% end %>
+      <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</section>
