@@ -34,6 +34,16 @@
           <label>Stade :</label><br/>
           <%= f.collection_select :stade_id, @stades, :id, :name, { :include_blank => '-- Choisir un stade --'}, required: true %>
         </div>
+
+        <div class="form-group">
+          <label>Score de l'équipe <%= @match.local_country.name %> :</label><br/>
+          <%= f.text_field :local_country_score, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <label>Score de l'équipe <%= @match.guess_country.name %> :</label><br/>
+          <%= f.text_field :guess_country_score, class: 'form-control'%>
+        </div>
       </div>
 
       <div class="box-footer">

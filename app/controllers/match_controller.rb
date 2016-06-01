@@ -87,6 +87,6 @@ class MatchController < ApplicationController
 
   private
   def match_params
-    params.require(:match).permit(:begin_at)
+    params.require(:match).permit(:begin_at, :local_country_score, :guess_country_score)
   end
 end

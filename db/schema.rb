@@ -11,27 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601080143) do
+ActiveRecord::Schema.define(version: 20160601135418) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name",               limit: 255
-    t.string   "description",        limit: 255, null: false
+    t.text     "description",        limit: 65535, null: false
     t.datetime "image_updated_at"
     t.integer  "image_file_size",    limit: 4
     t.string   "image_content_type", limit: 255
     t.string   "image_file_name",    limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "matches", force: :cascade do |t|
     t.datetime "begin_at"
-    t.integer  "local_country_id", limit: 4
-    t.integer  "guess_country_id", limit: 4
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "pool_id",          limit: 4, null: false
-    t.integer  "stade_id",         limit: 4, null: false
+    t.integer  "local_country_id",    limit: 4
+    t.integer  "guess_country_id",    limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "pool_id",             limit: 4, null: false
+    t.integer  "stade_id",            limit: 4, null: false
+    t.integer  "local_country_score", limit: 4
+    t.integer  "guess_country_score", limit: 4
   end
 
   add_index "matches", ["guess_country_id"], name: "index_matches_on_guess_country_id", using: :btree
@@ -47,7 +49,7 @@ ActiveRecord::Schema.define(version: 20160601080143) do
 
   create_table "prizes", force: :cascade do |t|
     t.string   "name",               limit: 150
-    t.string   "description",        limit: 255
+    t.text     "description",        limit: 65535
     t.integer  "quantity",           limit: 4
     t.string   "ref",                limit: 80
     t.string   "image_file_name",    limit: 255
