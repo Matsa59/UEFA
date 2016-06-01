@@ -11,7 +11,9 @@
           <div class="box-body">
             <div class="form-group">
               <label>Nom : </label><br />
-              <%= f.text_field :name, class: 'form-control' %>
+              <%= f.text_field :name, class: 'form-control', placeholder: 'Entrez le nom du stade' %>
+              <label>Adresse : </label><br />
+              <%= f.text_field :address, class: 'form-control', placeholder: 'Entrez l\'adresse du stade' %>
             </div>
           </div>
         </div>

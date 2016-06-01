@@ -7,8 +7,10 @@
     <%= form_for :stade, url: stade_update_path, method: :put do |f| %>
         <div class="box-body">
           <div class="form-group">
-            <label>Nom : </label>
-            <%= f.text_field :name, class: 'form-control' %>
+            <label>Nom : </label><br />
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Entrez le nom du stade' %>
+            <label>Adresse : </label><br />
+            <%= f.text_field :address, class: 'form-control', placeholder: 'Entrez l\'adresse du stade' %>
           </div>
         </div>
 

@@ -5,10 +5,15 @@
 <div class="col-xs-6">
   <div class="box box-primary">
     <%= form_for :country, url: country_create_path do |f| %>
+
       <div class="box-body">
         <div class="form-group">
           <label>Nom du pays</label>
           <%= f.text_field :name, class: 'form-control', placeholder: 'Entrez le nom du pays' %>
+          <label>Description du pays</label>
+          <%= f.text_field :description, class: 'form-control', placeholder: 'Entrez une description du pays' %>
+          <%= f.label :image %>
+          <%= f.file_field :image, class: 'form-control'%>
         </div>
       </div>
 
