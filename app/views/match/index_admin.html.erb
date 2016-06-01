@@ -27,6 +27,8 @@
                     <th class="sorting" tabindex="0" rowspan="1" colspan="1">Date du match</th>
                     <th rowspan="1" colspan="1">&Eacute;quipes</th>
                     <th rowspan="1" colspan="1">Stade</th>
+                    <th rowspan="1" colspan="1" class="actions-row">Local Score</th>
+                    <th rowspan="1" colspan="1" class="actions-row">Guess Score</th>
                     <th rowspan="1" colspan="1">Actions</th>
                   </tr>
                   </thead>
@@ -39,6 +41,12 @@
                         </td>
                         <td>
                           <%= match.stade.name %>
+                        </td>
+                        <td>
+                          <%= match.local_country_score %>
+                        </td>
+                        <td>
+                          <%= match.guess_country_score %>
                         </td>
                         <td>
                           <%= link_to match_edit_path(match), data: {no_turbolink: true} do %>
@@ -57,6 +65,8 @@
                     <th rowspan="1" colspan="1">Date du match</th>
                     <th rowspan="1" colspan="1">&Eacute;quipes</th>
                     <th rowspan="1" colspan="1">Stade</th>
+                    <th rowspan="1" colspan="1">Local Score</th>
+                    <th rowspan="1" colspan="1">Guess Score</th>
                     <th rowspan="1" colspan="1">Actions</th>
                   </tr>
                   </tfoot>
