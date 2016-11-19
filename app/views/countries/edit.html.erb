@@ -1,0 +1,24 @@
+<% content_for :header do %>
+    <h2>Modifier "<%= @country.name %>"</h2>
+<% end %>
+
+<div class="col-xs-6">
+  <div class="box box-primary">
+    <%= form_for :country, url: country_update_path(@country), method: :patch do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <label>Nom du pays</label>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Entrez le nom du pays' %>
+            <label>Description du pays</label>
+            <%= f.text_field :description, class: 'form-control', placeholder: 'Entrez une description du pays' %>
+            <%= f.label :image %>
+            <%= f.file_field :image, class: 'form-control'%>
+          </div>
+        </div>
+
+        <div class="box-footer">
+          <%= f.submit value: 'Enregistrer', class: 'btn btn-primary' %>
+        </div>
+    <% end %>
+  </div>
+</div>

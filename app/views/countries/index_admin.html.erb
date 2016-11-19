@@ -1,0 +1,79 @@
+<% content_for 'header' do %>
+  <h2>Listes des pays existants</h2>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Hover Data Table</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                  <col width="auto">
+                  <col width="100px">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting" tabindex="0" rowspan="1" colspan="1">Pays</th>
+                      <th class="middle-desc" rowspan="1" colspan="1">Description</th>
+                      <th class="" rowspan="1" colspan="1">Flag</th>
+                      <th class="actions-row" rowspan="1" colspan="1">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @countries.each do |country| %>
+                      <tr role="row" class="odd">
+                        <td><%= country.name %></td>
+                        <td><%= country.description %></td>
+                        <td><%= image_tag(country.image.url, :class => "flag")%></td>
+                        <td>
+                          <%= link_to country_edit_path(country), data: {no_turbolink: true} do %>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                          <% end %>
+
+                          <%= link_to country_delete_path(country), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                            <span class="glyphicon glyphicon-remove-circle red" aria-hidden="true"></span>
+                          <% end %>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th rowspan="1" colspan="1">Pays</th>
+                      <th class="middle-desc" rowspan="1" colspan="1">Description</th>
+                      <th class="" rowspan="1" colspan="1">Flag</th>
+                      <th class="actions-row" rowspan="1" colspan="1">Actions</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                Showing <%= @countries.current_page %> to <%= @countries.total_pages %> of <%= @countries.count %> entries
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                <%= will_paginate(@countries, :renderer => AdminHelper::LinkRenderer) %>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+
+  <%= link_to 'Ajouter un pays', country_new_path, class: 'btn btn-primary' %>
+</section>

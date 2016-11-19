@@ -1,0 +1,54 @@
+<% content_for :header do %>
+    <h2>Modifier le match <%= @match.local_country.name %> / <%= @match.guess_country.name %></h2>
+<% end %>
+
+<div class="col-xs-6">
+  <div class="box box-primary">
+    <%= match_errors_messages! %>
+
+    <%= form_for :match, url: match_update_path, method: :put do |f| %>
+      <div class="box-body">
+        <div class="box-body">
+          <div class="form-group">
+            <label>date : </label><br />
+            <%= f.datetime_select :begin_at, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Premier pays : </label><br />
+          <%= f.collection_select :local_country_id, @countries, :id, :name, { :include_blank => '-- Choisir un pays --' }, required: true %>
+        </div>
+
+        <div class="form-group">
+          <label>Second pays : </label><br />
+          <%= f.collection_select :guess_country_id, @countries, :id, :name, { :include_blank => '-- Choisir un pays --' }, required: true %>
+        </div>
+
+        <div class="form-group">
+          <label>Poule : </label><br />
+          <%= f.collection_select :pool_id, @pools, :id, :name, { :include_blank => '-- Choisir une poule --'}, required: true %>
+        </div>
+
+        <div class="form-group">
+          <label>Stade :</label><br/>
+          <%= f.collection_select :stade_id, @stades, :id, :name, { :include_blank => '-- Choisir un stade --'}, required: true %>
+        </div>
+
+        <div class="form-group">
+          <label>Score de l'équipe <%= @match.local_country.name %> :</label><br/>
+          <%= f.text_field :local_country_score, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <label>Score de l'équipe <%= @match.guess_country.name %> :</label><br/>
+          <%= f.text_field :guess_country_score, class: 'form-control'%>
+        </div>
+      </div>
+
+      <div class="box-footer">
+        <%= f.submit value: 'Enregistrer les modifications', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

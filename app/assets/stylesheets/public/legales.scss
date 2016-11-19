@@ -1,0 +1,48 @@
+.rules-page {
+  background: image_url("public/pattern-rules.png");
+  background-size: 1%;
+  .rules-content {
+    padding-top: 95px;
+    padding-bottom: 150px;
+
+    .rules-container {
+      border-radius: 3px;
+      margin-bottom: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      h1.rules-main-title {
+        font-size: 50px;
+      }
+      .rules-main-title {
+        margin-top: 30px;
+        font-size: 2.3em;
+      }
+      .rules {
+        .rule-title {
+          font-size: 1.3em;
+          margin: 20px 0 10px;
+        }
+        .rule-description {
+          font-size: 1.1em;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+.sitemap {
+  background-image: image_url("public/ChairW.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100%;
+  .btn-default {
+    width: 100%;
+  }
+  .sitemap-content {
+    margin-top: 200px;
+  }
+  .link-page {
+    margin-bottom: 15px;
+  }
+}

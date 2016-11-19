@@ -1,0 +1,22 @@
+<% content_for :header do %>
+    <h2>Modifier <%= @stade.name %></h2>
+<% end %>
+
+<div class="col-xs-6">
+  <div class="box box-primary">
+    <%= form_for :stade, url: stade_update_path, method: :put do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <label>Nom : </label><br />
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Entrez le nom du stade' %>
+            <label>Adresse : </label><br />
+            <%= f.text_field :address, class: 'form-control', placeholder: 'Entrez l\'adresse du stade' %>
+          </div>
+        </div>
+
+        <div class="box-footer">
+          <%= f.submit value: 'Engresitrer les modifications', class: 'btn btn-primary' %>
+        </div>
+    <% end %>
+  </div>
+</div>

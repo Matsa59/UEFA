@@ -1,0 +1,97 @@
+<% content_for 'header' do %>
+  <h2>Listes des matches prévus</h2>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Hover Data Table</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                  <col width="200px">
+                  <col width="auto">
+                  <col width="auto">
+                  <col width="100px">
+                  <thead>
+                  <tr role="row">
+                    <th class="sorting" tabindex="0" rowspan="1" colspan="1">Date du match</th>
+                    <th rowspan="1" colspan="1">&Eacute;quipes</th>
+                    <th rowspan="1" colspan="1">Stade</th>
+                    <th rowspan="1" colspan="1" class="actions-row">Local Score</th>
+                    <th rowspan="1" colspan="1" class="actions-row">Guess Score</th>
+                    <th rowspan="1" colspan="1">Actions</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% @matches.each do |match| %>
+                      <tr role="row" class="odd">
+                        <td><%= match.begin_at %></td>
+                        <td>
+                          <%= match.local_country.name %> / <%= match.guess_country.name %>
+                        </td>
+                        <td>
+                          <%= match.stade.name %>
+                        </td>
+                        <td>
+                          <%= match.local_country_score %>
+                        </td>
+                        <td>
+                          <%= match.guess_country_score %>
+                        </td>
+                        <td>
+                          <%= link_to match_edit_path(match), data: {no_turbolink: true} do %>
+                              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                          <% end %>
+
+                          <%= link_to match_delete_path(match), method: :delete, data: { confirm: 'Êtes vous sûr?' } do %>
+                              <span class="glyphicon glyphicon-remove-circle red" aria-hidden="true"></span>
+                          <% end %>
+                        </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th rowspan="1" colspan="1">Date du match</th>
+                    <th rowspan="1" colspan="1">&Eacute;quipes</th>
+                    <th rowspan="1" colspan="1">Stade</th>
+                    <th rowspan="1" colspan="1">Local Score</th>
+                    <th rowspan="1" colspan="1">Guess Score</th>
+                    <th rowspan="1" colspan="1">Actions</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                Showing <%= @matches.current_page %> to <%= @matches.total_pages %> of <%= @matches.count %> entries
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                <%= will_paginate(@matches, :renderer => AdminHelper::LinkRenderer) %>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+
+  <%= link_to 'Ajouter un match', match_new_path, class: 'btn btn-primary' %>
+</section>
+
+
